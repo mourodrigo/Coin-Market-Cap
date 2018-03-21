@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		302A199C2063118C0089058E /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302A199B2063118C0089058E /* Coin.swift */; };
 		30C6563020630B35000310FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6562F20630B35000310FD /* AppDelegate.swift */; };
-		30C6563220630B35000310FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6563120630B35000310FD /* ViewController.swift */; };
+		30C6563220630B35000310FD /* CoinMarketCapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6563120630B35000310FD /* CoinMarketCapViewController.swift */; };
 		30C6563520630B35000310FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30C6563320630B35000310FD /* Main.storyboard */; };
 		30C6563720630B35000310FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30C6563620630B35000310FD /* Assets.xcassets */; };
 		30C6563A20630B35000310FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30C6563820630B35000310FD /* LaunchScreen.storyboard */; };
@@ -32,7 +32,7 @@
 		302A199B2063118C0089058E /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 		30C6562C20630B35000310FD /* CoinMarketCap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoinMarketCap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30C6562F20630B35000310FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		30C6563120630B35000310FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		30C6563120630B35000310FD /* CoinMarketCapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinMarketCapViewController.swift; sourceTree = "<group>"; };
 		30C6563420630B35000310FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		30C6563620630B35000310FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30C6563920630B35000310FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -85,6 +85,31 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		302A199D2063141E0089058E /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				30C6562F20630B35000310FD /* AppDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		302A199E206314310089058E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				30C6563820630B35000310FD /* LaunchScreen.storyboard */,
+				30C6563320630B35000310FD /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		302A199F206314AD0089058E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				30C6563120630B35000310FD /* CoinMarketCapViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		30C6562320630B35000310FD = {
 			isa = PBXGroup;
 			children = (
@@ -108,12 +133,11 @@
 		30C6562E20630B35000310FD /* CoinMarketCap */ = {
 			isa = PBXGroup;
 			children = (
+				302A199F206314AD0089058E /* ViewControllers */,
+				302A199E206314310089058E /* Storyboards */,
+				302A199D2063141E0089058E /* Delegates */,
 				302A199A206311790089058E /* Models */,
-				30C6562F20630B35000310FD /* AppDelegate.swift */,
-				30C6563120630B35000310FD /* ViewController.swift */,
-				30C6563320630B35000310FD /* Main.storyboard */,
 				30C6563620630B35000310FD /* Assets.xcassets */,
-				30C6563820630B35000310FD /* LaunchScreen.storyboard */,
 				30C6563B20630B35000310FD /* Info.plist */,
 			);
 			path = CoinMarketCap;
@@ -359,7 +383,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				302A199C2063118C0089058E /* Coin.swift in Sources */,
-				30C6563220630B35000310FD /* ViewController.swift in Sources */,
+				30C6563220630B35000310FD /* CoinMarketCapViewController.swift in Sources */,
 				30C6563020630B35000310FD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

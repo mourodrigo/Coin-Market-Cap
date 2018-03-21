@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CoinMarketCapViewController.swift
 //  CoinMarketCap
 //
 //  Created by Rodrigo Bueno Tomiosso on 21/03/2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CoinMarketCapViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
