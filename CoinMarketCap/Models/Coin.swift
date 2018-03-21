@@ -27,6 +27,10 @@ class Coin: Object {
     @objc dynamic var percent_change_7d : Double = 0.0
     @objc dynamic var last_updated : Date?
     
+    override static func primaryKey() -> String? {
+        return "id"
+    }
+    
     convenience init(id : String, name : String, symbol : String, rank : Int,
                      price_usd : Double, price_btc : Double, volume_usd_24: Double,
                      market_cap_usd : Int64, available_supply : Double, total_supply : Double,
