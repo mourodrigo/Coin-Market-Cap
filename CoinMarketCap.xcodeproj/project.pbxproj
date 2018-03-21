@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		302A199C2063118C0089058E /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302A199B2063118C0089058E /* Coin.swift */; };
 		30C6563020630B35000310FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6562F20630B35000310FD /* AppDelegate.swift */; };
 		30C6563220630B35000310FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6563120630B35000310FD /* ViewController.swift */; };
 		30C6563520630B35000310FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30C6563320630B35000310FD /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		302A199B2063118C0089058E /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 		30C6562C20630B35000310FD /* CoinMarketCap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoinMarketCap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30C6562F20630B35000310FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30C6563120630B35000310FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +77,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		302A199A206311790089058E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				302A199B2063118C0089058E /* Coin.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		30C6562320630B35000310FD = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +108,7 @@
 		30C6562E20630B35000310FD /* CoinMarketCap */ = {
 			isa = PBXGroup;
 			children = (
+				302A199A206311790089058E /* Models */,
 				30C6562F20630B35000310FD /* AppDelegate.swift */,
 				30C6563120630B35000310FD /* ViewController.swift */,
 				30C6563320630B35000310FD /* Main.storyboard */,
@@ -347,6 +358,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				302A199C2063118C0089058E /* Coin.swift in Sources */,
 				30C6563220630B35000310FD /* ViewController.swift in Sources */,
 				30C6563020630B35000310FD /* AppDelegate.swift in Sources */,
 			);
