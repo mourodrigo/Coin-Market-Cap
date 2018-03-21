@@ -10,6 +10,7 @@
 		302A199C2063118C0089058E /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302A199B2063118C0089058E /* Coin.swift */; };
 		302A19A2206315F00089058E /* TickerClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302A19A1206315F00089058E /* TickerClient.swift */; };
 		302A19A420631D500089058E /* CoinMarketCapTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302A19A320631D500089058E /* CoinMarketCapTableViewController.swift */; };
+		302A19A720631F400089058E /* CoinMarketCapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302A19A620631F400089058E /* CoinMarketCapTableViewCell.swift */; };
 		30C6563020630B35000310FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6562F20630B35000310FD /* AppDelegate.swift */; };
 		30C6563520630B35000310FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30C6563320630B35000310FD /* Main.storyboard */; };
 		30C6563720630B35000310FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30C6563620630B35000310FD /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 		302A199B2063118C0089058E /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 		302A19A1206315F00089058E /* TickerClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerClient.swift; sourceTree = "<group>"; };
 		302A19A320631D500089058E /* CoinMarketCapTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinMarketCapTableViewController.swift; sourceTree = "<group>"; };
+		302A19A620631F400089058E /* CoinMarketCapTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinMarketCapTableViewCell.swift; sourceTree = "<group>"; };
 		30C6562C20630B35000310FD /* CoinMarketCap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoinMarketCap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30C6562F20630B35000310FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30C6563420630B35000310FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -107,7 +109,7 @@
 		302A199F206314AD0089058E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				302A19A320631D500089058E /* CoinMarketCapTableViewController.swift */,
+				302A19A520631F210089058E /* CoinMarketCap */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -118,6 +120,15 @@
 				302A19A1206315F00089058E /* TickerClient.swift */,
 			);
 			path = APIClients;
+			sourceTree = "<group>";
+		};
+		302A19A520631F210089058E /* CoinMarketCap */ = {
+			isa = PBXGroup;
+			children = (
+				302A19A320631D500089058E /* CoinMarketCapTableViewController.swift */,
+				302A19A620631F400089058E /* CoinMarketCapTableViewCell.swift */,
+			);
+			path = CoinMarketCap;
 			sourceTree = "<group>";
 		};
 		30C6562320630B35000310FD = {
@@ -394,6 +405,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				302A199C2063118C0089058E /* Coin.swift in Sources */,
+				302A19A720631F400089058E /* CoinMarketCapTableViewCell.swift in Sources */,
 				302A19A420631D500089058E /* CoinMarketCapTableViewController.swift in Sources */,
 				302A19A2206315F00089058E /* TickerClient.swift in Sources */,
 				30C6563020630B35000310FD /* AppDelegate.swift in Sources */,
