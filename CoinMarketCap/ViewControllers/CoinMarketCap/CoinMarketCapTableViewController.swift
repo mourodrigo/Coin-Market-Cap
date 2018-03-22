@@ -64,6 +64,7 @@ class CoinMarketCapTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let coin = dataSource()[indexPath.row]
         performSegue(withIdentifier: showDetailSegue, sender: coin)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
