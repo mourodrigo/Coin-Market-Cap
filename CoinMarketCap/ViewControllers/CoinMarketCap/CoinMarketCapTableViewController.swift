@@ -12,6 +12,7 @@ import RealmSwift
 class CoinMarketCapTableViewController: UITableViewController {
 
     let realm = try! Realm()
+    let showDetailSegue = "ShowCoinMarketCapDetailViewController"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,4 +60,18 @@ class CoinMarketCapTableViewController: UITableViewController {
 
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let coin = dataSource()[indexPath.row]
+        performSegue(withIdentifier: showDetailSegue, sender: coin)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == showDetailSegue,
+            let destination = segue.destination as? CoinMarketCapDetailViewController,
+            let selectedCoin = sender as? Coin {
+            destination.selectedCoin = selectedCoin
+        }
+    }
+    
 }
