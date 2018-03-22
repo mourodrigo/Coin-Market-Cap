@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 extension String {
     var toLocale: Locale {
@@ -35,5 +36,17 @@ extension Numeric {
             return formater.string(from: num) ?? ""
         }
         return ""
+    }
+}
+
+extension UILabel {
+    func setColorForValue(value: Double) {
+        if value > 0 {
+            self.textColor = UIColor.green
+        } else if value < 0 {
+            self.textColor = UIColor.red
+        } else {
+            self.textColor = UIColor.black
+        }
     }
 }

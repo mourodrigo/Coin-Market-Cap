@@ -55,8 +55,8 @@ class CoinMarketCapTableViewController: UITableViewController {
         let coin = dataSource()[indexPath.row]
         
         cell.coinNameLabel.text = coin.name
-        cell.marketCapLabel.text = "$ \(coin.market_cap_usd.format())"
-        cell.priceLabel.text = "$ \(coin.price_usd.format())"
+        cell.marketCapLabel.text = "Market Cap $ \(coin.market_cap_usd.format())"
+        cell.priceLabel.text = "Price $ \(coin.price_usd.format())"
 
         return cell
     }

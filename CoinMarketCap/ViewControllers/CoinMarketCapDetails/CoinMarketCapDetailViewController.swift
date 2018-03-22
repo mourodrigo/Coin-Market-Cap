@@ -38,16 +38,21 @@ class CoinMarketCapDetailViewController: UIViewController {
         if let coin = selectedCoin {
             nameLabel.text = coin.name
             rankLabel.text = "\(coin.rank)"
-            priceUsdLabel.text = "USD $\(coin.price_usd.format())"
-            nameBtcLabel.text = "BTC $\(coin.price_btc.format())"
-            volumeLabel.text = "USD $\(coin.volume_usd_24.format())"
-            marketCapLabel.text = "USD $\(coin.market_cap_usd.format())"
-            availableSupplyLabel.text = "USD $\(coin.available_supply.format())"
+            priceUsdLabel.text = "$ \(coin.price_usd.format())"
+            nameBtcLabel.text = "\(coin.price_btc.format())"
+            volumeLabel.text = "$ \(coin.volume_usd_24.format())"
+            marketCapLabel.text = "$ \(coin.market_cap_usd.format())"
+            availableSupplyLabel.text = "$ \(coin.available_supply.format())"
             totalLabel.text = "\(coin.total_supply.format())"
             maxSupplyLabel.text = "\(coin.max_supply.format())"
-            percent1hLabel.text = "\(coin.percent_change_1h.format())"
-            percent24hLabel.text = "\(coin.percent_change_24h.format())"
-            percent7dLabel.text = "\(coin.percent_change_7d.format())"
+        
+            percent1hLabel.text = "\(coin.percent_change_1h.format())%"
+            percent24hLabel.text = "\(coin.percent_change_24h.format())%"
+            percent7dLabel.text = "\(coin.percent_change_7d.format())%"
+
+            percent1hLabel.setColorForValue(value: coin.percent_change_1h)
+            percent24hLabel.setColorForValue(value: coin.percent_change_24h)
+            percent7dLabel.setColorForValue(value: coin.percent_change_7d)
         }
     }
 
