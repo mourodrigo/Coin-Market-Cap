@@ -14,6 +14,7 @@
         <scene sceneID="Oip-fm-X1v">
             <objects>
                 <navigationController id="5CF-cs-qdP" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8L3-JT-Ji3">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -26,7 +27,7 @@
             </objects>
             <point key="canvasLocation" x="-465" y="52"/>
         </scene>
-        <!--Coin Market Cap Table View Controller-->
+        <!--Coin Market Cap-->
         <scene sceneID="9UD-aA-sqk">
             <objects>
                 <tableViewController id="HoA-3q-VCD" customClass="CoinMarketCapTableViewController" customModule="CoinMarketCap" customModuleProvider="target" sceneMemberID="viewController">
@@ -85,7 +86,8 @@
                             <outlet property="delegate" destination="HoA-3q-VCD" id="a77-Nw-gGZ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="nz2-3N-DDD"/>
+                    <navigationItem key="navigationItem" title="Coin Market Cap" id="nz2-3N-DDD"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F8J-do-0J5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
