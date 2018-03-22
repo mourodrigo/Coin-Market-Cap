@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HoA-3q-VCD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5CF-cs-qdP">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,6 +10,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Oip-fm-X1v">
+            <objects>
+                <navigationController id="5CF-cs-qdP" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8L3-JT-Ji3">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="HoA-3q-VCD" kind="relationship" relationship="rootViewController" id="Aoy-sg-rTn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p9z-p9-kY1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-465" y="52"/>
+        </scene>
         <!--Coin Market Cap Table View Controller-->
         <scene sceneID="9UD-aA-sqk">
             <objects>
@@ -69,10 +85,11 @@
                             <outlet property="delegate" destination="HoA-3q-VCD" id="a77-Nw-gGZ"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="nz2-3N-DDD"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F8J-do-0J5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="701.60000000000002" y="30.134932533733135"/>
+            <point key="canvasLocation" x="295" y="52"/>
         </scene>
     </scenes>
 </document>
