@@ -8,6 +8,7 @@
 
 import Foundation
 import RealmSwift
+import SwiftyJSON
 
 class Coin: Object {
 
@@ -55,6 +56,26 @@ class Coin: Object {
         self.percent_change_7d = percent_change_7d
         self.last_updated = last_updated
         
+    }
+    
+    class func build(with json:JSON) -> Coin {
+        
+        return Coin(id: json["id"].stringValue,
+                     name: json["name"].stringValue,
+                     symbol: json["symbol"].stringValue,
+                     rank: json["rank"].intValue,
+                     price_usd: json["price_usd"].doubleValue,
+                     price_btc: json["price_btc"].doubleValue,
+                     volume_usd_24: json["24h_volume_usd"].doubleValue,
+                     market_cap_usd: json["market_cap_usd"].int64Value,
+                     available_supply: json["available_supply"].doubleValue,
+                     total_supply: json["total_supply"].doubleValue,
+                     max_supply: json["max_supply"].doubleValue,
+                     percent_change_1h: json["percent_change_1h"].doubleValue,
+                     percent_change_24h: json["percent_change_24h"].doubleValue,
+                     percent_change_7d: json["percent_change_7d"].doubleValue,
+                     last_updated: Date(timeIntervalSince1970: json["last_updated"].doubleValue)
+        )
     }
 
 }
