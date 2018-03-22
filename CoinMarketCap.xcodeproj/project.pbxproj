@@ -242,6 +242,11 @@
 					30C6562B20630B35000310FD = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					30C6563F20630B35000310FD = {
 						CreatedOnToolsVersion = 9.2;

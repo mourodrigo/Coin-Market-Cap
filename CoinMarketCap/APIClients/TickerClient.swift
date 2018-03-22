@@ -13,7 +13,7 @@ import RealmSwift
 
 class TickerClient: Object {
 
-    func fetch( start: Int = 0, limit: Int = 10 ) {
+    func fetch( start: Int = 0, limit: Int = 10, completion: @escaping (() -> Void) ) {
         guard let delegate = UIApplication.shared.delegate as? AppDelegate else { return }
         
         let url = delegate.baseUrl + "/ticker/?start=\(start)&limit=\(limit)"
@@ -49,6 +49,7 @@ class TickerClient: Object {
                 }
                 if realm.isInWriteTransaction { try! realm.commitWrite() }
             }
+            completion()            
         }
     }
     

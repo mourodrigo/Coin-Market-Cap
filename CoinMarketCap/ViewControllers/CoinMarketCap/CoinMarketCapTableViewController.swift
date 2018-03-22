@@ -16,7 +16,14 @@ class CoinMarketCapTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        TickerClient.init().fetch()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        TickerClient.init().fetch {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
     }
 
     // MARK: - Table view data source

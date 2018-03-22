@@ -14,9 +14,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     let baseUrl = "https://api.coinmarketcap.com/v1/"
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        print("\n\nDocument root ",FileManager.default.urls(for: .documentDirectory,in: .userDomainMask).first!, "\n\n") // prints the document root on console for debbuging
+        
+        UIApplication.shared.setMinimumBackgroundFetchInterval(UIApplicationBackgroundFetchIntervalMinimum)
         return true
     }
 
@@ -40,6 +43,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        let tickerClient = TickerClient.init()
+        if let coinMarketCapTVC = rootViewController() as? CoinMarketCapTableViewController {
+            tickerClient.fetch {
+                DispatchQueue.main.async {
+                    coinMarketCapTVC.tableView.reloadData()
+                }
+                completionHandler(.newData)
+            }
+        }
+    }
+    
+    func rootViewController() -> UIViewController? {
+        let navigationController = self.window?.rootViewController as? UINavigationController
+        return navigationController?.viewControllers.first
     }
 
 
