@@ -19,14 +19,21 @@ class CoinMarketCapTableViewController: UITableViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        TickerClient.init().fetch {
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
-        }
+        super.viewDidAppear(animated)
+        fetchDataIfEmpty()
     }
 
     // MARK: - Table view data source
+
+    func fetchDataIfEmpty() {
+        if dataSource().count == 0 {
+            TickerClient.init().fetch {
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
+        }
+    }
     
     func dataSource() -> Results<Coin> {
         return realm.objects(Coin.self).sorted(byKeyPath: "market_cap_usd", ascending: false)
