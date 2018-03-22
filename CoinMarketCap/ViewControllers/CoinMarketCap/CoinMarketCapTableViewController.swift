@@ -12,7 +12,6 @@ import RealmSwift
 class CoinMarketCapTableViewController: UITableViewController {
 
     let realm = try! Realm()
-    let defaultCoin = "USD $"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,8 +54,8 @@ class CoinMarketCapTableViewController: UITableViewController {
         let coin = dataSource()[indexPath.row]
         
         cell.coinNameLabel.text = coin.name
-        cell.marketCapLabel.text = "\(defaultCoin) \(coin.market_cap_usd)"
-        cell.priceLabel.text = "\(defaultCoin) \(coin.price_usd)"
+        cell.marketCapLabel.text = "$ \(coin.market_cap_usd.format())"
+        cell.priceLabel.text = "$ \(coin.price_usd.format())"
 
         return cell
     }
